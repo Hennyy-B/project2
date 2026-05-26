@@ -24,27 +24,27 @@
     <?php include './inc/header.inc' ?>
 
     <main class="page-wrapper">
-        <form class="application-form" action="submit_application.php" method="post">
+        <form class="application-form" action="process_eoi.php" method="post">
             <fieldset>
                 <legend>Customer details</legend>
                 <p>
-                    <label for="refnumb"> Job reference number </label>
-                    <input type="text" id="refnumb" name="refnumb" pattern=".{7,10}" required="required">
+                    <label for="job_reference"> Job reference number </label>
+                    <input type="text" id="job_reference" name="job_reference">
                 </p>
             </fieldset>
 
             <fieldset>
                 <legend>Personal details</legend>
                 <p class="row2">
-                    <label for="firstname"> First Name </label>
-                    <input type="text" id="firstname" name="firstname" pattern="^[a-zA-Z]+$" required="required">
-                    <label for="lastname"> Last Name </label>
-                    <input type="text" id="lastname" name="lastname" pattern="^[a-zA-Z]+$" required="required">
+                    <label for="first_name"> First Name </label>
+                    <input type="text" id="first_name" name="first_name">
+                    <label for="last_name"> Last Name </label>
+                    <input type="text" id="last_name" name="last_name">
                 </p>
 
                 <p>
                     <label for="dob"> Date of Birth </label>
-                    <input type="date" id="dob" name="dob" required="required">
+                    <input type="date" id="dob" name="dob">
                 </p>
             </fieldset>
             <fieldset>
@@ -64,13 +64,13 @@
                 <legend>Address</legend>
                 <p class="row2">
                     <label for="street">Street Address</label>
-                    <input type="text" id="street" name="street" pattern=".{7,10}" required="required">
+                    <input type="text" id="street" name="street">
                     <label for="suburb">Suburb</label>
-                    <input type="text" id="suburb" name="suburb" pattern=".{2,50}" required="required">
+                    <input type="text" id="suburb" name="suburb">
                 </p>
                 <p class="row2">
                     <label for="state">State</label>
-                    <select id="state" name="state" required="required">
+                    <select id="state" name="state">
                         <option value="">Please select</option>
                         <option value="VIC">VIC</option>
                         <option value="NSW">NSW</option>
@@ -83,7 +83,7 @@
                     </select>
 
                     <label for="postcode">Postcode</label>
-                    <input type="text" id="postcode" name="postcode" pattern="^\d{4}$" required="required">
+                    <input type="text" id="postcode" name="postcode">
                 </p>
             </fieldset>
 
@@ -91,11 +91,11 @@
                 <legend>Contact details</legend>
                 <p>
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required="required">
+                    <input type="email" id="email" name="email">
                 </p>
                 <p>
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" pattern="^\d{10}$" required="required">
+                    <input type="tel" id="phone" name="phone">
                 </p>
             </fieldset>
 
@@ -103,7 +103,7 @@
                 <legend>Skills</legend>
                 <p>
                     <label for="skills">Skill list</label>
-                    <input type="text" id="skills" name="skills" pattern="^[a-zA-Z\s,]+$" required="required">
+                    <input type="text" id="skills" name="skills">
                 </p>
             </fieldset>
 

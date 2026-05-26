@@ -70,7 +70,7 @@
                     <li>Knowledge on how Production runs</li>
                 </ul>
 
-                <a href="apply.html" class="apply-btn">Apply Now</a>
+                <a href="apply.php" class="apply-btn">Apply Now</a>
             </section>
 
             <section class="job2 card">
@@ -101,7 +101,7 @@
                     <li>Quick Learner</li>
                 </ul>
 
-                <a href="apply.html" class="apply-btn">Apply Now</a>
+                <a href="apply.php" class="apply-btn">Apply Now</a>
             </section>
         </div>
     </main>
