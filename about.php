@@ -94,10 +94,44 @@
                     <td>Morning Person</td>
                 </tr>
             </table>
+
+
+            <?php
+            require_once 'settings.php';
+            $dbconn = @mysqli_connect($host, $user, $password, $database);
+            if ($dbconn) {
+                $query = "SELECT * FROM project_contribution";
+                $result = mysqli_query($dbconn, $query);
+                if ($result) {
+                    echo "<table border='1' cellpadding='8' cellspacing='0'>";
+                    echo "<tr>";
+                    echo "<th>ID</th>";
+                    echo "<th>Name</th>";
+                    echo "<th>Project Number</th>";
+                    echo "<th>Contribution</th>";
+                    echo "</tr>";
+                    echo "<tbody>";
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        echo "<tr>";
+                        echo "<td>" . $row['id'] . "</td>";
+                        echo "<td>" . $row['name'] . "</td>";
+                        echo "<td>" . $row['project_number'] . "</td>";
+                        echo "<td>" . $row['contribution'] . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<p>There is no information to display.<p>";
+                }
+                mysqli_close($dbconn);
+            } else {
+                echo "<p>Unable to connect to the db.<p>";
+            }
+
+            include './inc/footer.inc'
+                ?>
         </section>
     </main>
 
-    <?php include './inc/footer.inc' ?>
 </body>
 
 </html>
