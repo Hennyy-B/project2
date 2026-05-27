@@ -122,10 +122,8 @@ if ($action == 'change_status' && isset($_POST['eoi_id']) && isset($_POST['statu
             <select name="status" required>
                 <option value="">Select Status</option>
                 <option value="New">New</option>
-                <option value="Under Review">Under Review</option>
-                <option value="Shortlisted">Shortlisted</option>
-                <option value="Interviewed">Interviewed</option>
-                <option value="Rejected">Rejected</option>
+                <option value="Current">Current</option>
+                <option value="Final">Final</option>
             </select>
             <button type="submit">Update</button>
         </form>
