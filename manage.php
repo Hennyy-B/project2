@@ -133,16 +133,7 @@ if ($action == 'change_status' && isset($_POST['eoi_id']) && isset($_POST['statu
 
     <!-- Results Table -->
     <?php if (!empty($eois)): ?>
-        <h3>Results (Sort by: 
-            <?php 
-                $i = 0;
-                foreach ($valid_sorts as $s) {
-                    if ($i > 0) echo " | ";
-                    echo "<a href=\"manage.php?action=" . $action . "&sort=" . $s . "\">" . str_replace('_', ' ', $s) . "</a>";
-                    $i++;
-                }
-            ?>
-        )</h3>
+        <h3>Results</h3>
         
         <table border="1">
             <tr>

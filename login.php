@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $username;
             header("Location: manage.php");
-            exit;yep
+            exit;
         }
     }
     $error = "Invalid username or password";
