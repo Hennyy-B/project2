@@ -94,8 +94,9 @@
                     <td>Morning Person</td>
                 </tr>
             </table>
-
-
+        </section>
+        <section class="card card-4">
+            <caption class="table_caption">Member Contribution Table</caption>
             <?php
             require_once 'settings.php';
             $dbconn = @mysqli_connect($host, $user, $password, $database);
@@ -103,14 +104,13 @@
                 $query = "SELECT * FROM project_contribution";
                 $result = mysqli_query($dbconn, $query);
                 if ($result) {
-                    echo "<table border='1' cellpadding='8' cellspacing='0'>";
+                    echo "<table border='1'>";
                     echo "<tr>";
                     echo "<th>ID</th>";
                     echo "<th>Name</th>";
                     echo "<th>Project Number</th>";
                     echo "<th>Contribution</th>";
                     echo "</tr>";
-                    echo "<tbody>";
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo "<tr>";
                         echo "<td>" . $row['id'] . "</td>";
@@ -119,6 +119,7 @@
                         echo "<td>" . $row['contribution'] . "</td>";
                         echo "</tr>";
                     }
+                    echo "</table>";
                 } else {
                     echo "<p>There is no information to display.<p>";
                 }
@@ -126,12 +127,10 @@
             } else {
                 echo "<p>Unable to connect to the db.<p>";
             }
-
-            include './inc/footer.inc'
-                ?>
+            ?>
         </section>
     </main>
-
+    <?php include './inc/footer.inc' ?>
 </body>
 
 </html>

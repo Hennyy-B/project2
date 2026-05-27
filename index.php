@@ -26,10 +26,8 @@
 
         <!-- ChatGPT was used for Slogan, description and table conentents -->
         <section class="intro">
-            <h2>Slogan</h2>
             <p style="font-size: 20px;">Commercalify Powering Seamless Digital Shopping.</p>
 
-            <h2>Description</h2>
             <p>Commercalify is a forward-thinking e-commerce and digital retail platform dedicated to delivering smooth,
                 intuitive, and engaging online shopping experiences. Our mission is to connect customers with products
                 through innovative technology, user-friendly design, and efficient digital workflows.</p>
